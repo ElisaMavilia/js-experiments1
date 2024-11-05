@@ -60,13 +60,19 @@ const jonas = {
         calcAge: function(){
             this.age = 2037 - this.birthYear;
             return this.age;
+        },
+// Jonas is a 46 years old teacher, and he has a driver's license
+        getSummary: function(){
+            return `${this.firstName} is a ${this.calcAge()} years old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
         }
 };
 
 console.log(jonas.calcAge()); //dot notation
 console.log(jonas.age)
 
-// Jonas is a 46 years old teacher, and he has a driver's license
+console.log(jonas.getSummary());
+
+// Jonas is a 46 years old teacher, and he has a driver's license, with if statement
 let hasAlicense = "he has a driver's license"; 
 if (jonas.hasDriversLicense){
     console.log(hasDriversLicense);
