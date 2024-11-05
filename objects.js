@@ -50,7 +50,7 @@ const jonas = {
     birthYear: 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+    hasDriversLicense: false,
 
    /*  calcAge: function(birthYear){
         return 2037 - this.birthYear; //this refererres to the object of this method, so we don't need to repeat the name of the object
