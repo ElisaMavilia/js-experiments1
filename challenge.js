@@ -235,16 +235,13 @@ const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
   }
 
-
-  for (let i = 0; i < bills.length; i++){
-    
-   let finaleBill =  calcTip(bills[i]);
-  tips.push(finaleBill);
-
+for (let i = 0; i < bills.length; i++){
+    let tip = calcTip(bills[i]);
+    tips.push(tip);
   }
  
-  console.log(bills);
-  console.log(tips);
+console.log(bills);
+console.log(tips);
 
 
 
