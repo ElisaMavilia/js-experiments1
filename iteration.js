@@ -12,24 +12,24 @@ for(let rep = 1; rep <= 10; rep ++){
 
 const types = []; 
 
-const jonasArray = [
+/* const jonasArray = [
     'Jonas',
     'Schmedtman',
     2037 - 1991,
     'teacher',
     ['Michael', 'Peter', 'Steven'],
     true
-];
+]; */
 
-for(let i = 0; i < jonasArray.length ; i++){
+/* for(let i = 0; i < jonasArray.length ; i++){
     console.log(jonasArray[i], typeof jonasArray[i]);
 
    /*  types[i] = typeof jonasArray[i]; */ //Filling types array with the typeof of jonasArray
-    types.push(typeof jonasArray[i]); //Filing types with the push method
+    /* types.push(typeof jonasArray[i]); //Filing types with the push method
 
 }
 
-console.log(types);
+console.log(types); */
 
 const years =[
     1991,
@@ -50,19 +50,44 @@ console.log(ages);
 // continue is to exit the current iteration of the loo and continue to the next one
 // break is to completely terminate the whole loop
 
-console.log('--- ONLY STRINGS ---');
+/* console.log('--- ONLY STRINGS ---');
 for(let i = 0; i < jonasArray.length; i++){
     if(typeof jonasArray[i] !== 'string') continue;
      //continue will print just the strings
     console.log(jonasArray[i], typeof jonasArray[i]);
-}
+} */
 
-console.log('--- BREAK WITH NUMBER ---');
+/* console.log('--- BREAK WITH NUMBER ---');
 for(let i = 0; i < jonasArray.length; i++){
     if(typeof jonasArray[i] !== 'number') break;
      //continue will print just the strings
     console.log(jonasArray[i], typeof jonasArray[i]);
+} */
+
+//LOOPING BACKWARDS AND LOOPS IN LOOPS
+
+// looping backward
+const jonasArray = [
+    'Jonas',
+    'Schmedtman',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+for(let i = jonasArray.length - 1; i >= 0; i--){
+    console.log(i, jonasArray[i]);
 }
+
+//loop inside a loop
+for (let exercise = 1; exercise < 4; exercise ++){
+    console.log(`------- Starting exercise ${exercise}------`);
+
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+    }
+}
+
 
 
 
