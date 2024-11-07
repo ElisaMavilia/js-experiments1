@@ -3,7 +3,7 @@
 /* console.log('Lifting weights repetition 1');
  */
 //for loop keeps runnig while the condition is TRUE
-for(let rep = 1; rep <= 10; rep ++){
+/* for(let rep = 1; rep <= 10; rep ++){
     console.log(`Lifting weights repetition ${rep}`); 
 };
 // rep ++ entails rep = rep +1;
@@ -11,7 +11,7 @@ for(let rep = 1; rep <= 10; rep ++){
 // Looping Arrays (reading array amd creating a new one)
 
 const types = []; 
-
+ */
 /* const jonasArray = [
     'Jonas',
     'Schmedtman',
@@ -70,8 +70,8 @@ for(let i = 0; i < jonasArray.length; i++){
 const jonasArray = [
     'Jonas',
     'Schmedtman',
-    2037 - 1991,
-    'teacher',
+    2037 - 1991, 
+
     ['Michael', 'Peter', 'Steven'],
 ];
 
@@ -87,6 +87,29 @@ for (let exercise = 1; exercise < 4; exercise ++){
         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
     }
 }
+
+// WHILE LOOP
+
+/* for(let rep = 1; rep <= 10; rep ++){
+    console.log(`Lifting weights repetition ${rep}`); 
+}; */
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep}`); 
+    rep ++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end...');   
+}
+
+
 
 
 
