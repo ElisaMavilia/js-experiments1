@@ -224,7 +224,7 @@ To calculate the average, divide the sum you calculated before by the length of 
 
 Call the function with the totals array. */
 
-let bills = [22, 295, 176, 440, 37, 105, 10, 110, 86, 52]
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
 
 let tips = [];
 let totals = [];
@@ -234,38 +234,37 @@ const calcTip = function (bill) {
   }
 
 for (let i = 0; i < bills.length; i++){
-    let tip = calcTip(bills[i]);
+    const tip = calcTip(bills[i]); // we use const because in each iteration a new tip variable is being created, we are not mutating or changing th original tip, we are creating a new variable every each iteration
     tips.push(tip);
+    totals.push(tip + bills[i]);
   }
  
-console.log(bills);
-console.log(tips);
+console.log(bills, tips, totals);
 
-const totalAmount = function (bill, tip){
+/* const totalAmount = function (bill, tip){
     return bill + tip;
 }
 
 for (let i = 0; i < bills.length && i < tips.length; i++){
-    let total = totalAmount(bills[i], tips[i])
+    const total = totalAmount(bills[i], tips[i])
     totals.push(total);
 }
 
-console.log(totals);
-
-let sum = 0;
-
-for(let i = 0; i < totals.length; i++){
-   sum += totals[i];
-}
-
-console.log(sum);
+console.log(totals); */
 
 function calcAverage2(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+        // sum = sum + arr[i];
+     }
+     console.log(sum);
     let totalAverage = sum / arr.length;
     return totalAverage;
 }
 
 console.log(calcAverage2(totals));
+
 
 
 
