@@ -224,9 +224,7 @@ To calculate the average, divide the sum you calculated before by the length of 
 
 Call the function with the totals array. */
 
-let bills = [
-    22, 295, 176, 440, 37, 105, 10, 110, 86, 52
-]
+let bills = [22, 295, 176, 440, 37, 105, 10, 110, 86, 52]
 
 let tips = [];
 let totals = [];
@@ -242,6 +240,34 @@ for (let i = 0; i < bills.length; i++){
  
 console.log(bills);
 console.log(tips);
+
+const totalAmount = function (bill, tip){
+    return bill + tip;
+}
+
+for (let i = 0; i < bills.length && i < tips.length; i++){
+    let total = totalAmount(bills[i], tips[i])
+    totals.push(total);
+}
+
+console.log(totals);
+
+let sum = 0;
+
+for(let i = 0; i < totals.length; i++){
+   sum += totals[i];
+}
+
+console.log(sum);
+
+function calcAverage2(arr){
+    let totalAverage = sum / arr.length;
+    return totalAverage;
+}
+
+console.log(calcAverage2(totals));
+
+
 
 
 
